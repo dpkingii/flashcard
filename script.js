@@ -1,7 +1,5 @@
 const flashcards = [
-    { term: "HTML", definition: "HyperText Markup Language" },
-    { term: "CSS", definition: "Cascading Style Sheets" },
-    { term: "JavaScript", definition: "Programming language of the web" }
+    
 ];
 
 // You can use flashcards.length to get the length of the array
@@ -37,6 +35,7 @@ document.getElementById('flashcard').addEventListener('click', function() {
 document.getElementById('prev-btn').addEventListener('click', function() {
     if(currentIndex != 0){
         currentIndex--
+        showingTerm = true;
         displayCard();
     }
     
@@ -44,6 +43,7 @@ document.getElementById('prev-btn').addEventListener('click', function() {
 document.getElementById('next-btn').addEventListener('click', function() {
     if(currentIndex < flashcards.length-1){
         currentIndex++
+        showingTerm = true;
         displayCard();
     }
     
